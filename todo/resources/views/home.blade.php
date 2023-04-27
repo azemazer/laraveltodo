@@ -4,6 +4,7 @@
     <div class="card-body">
       <!-- Action -->
       <form action="/action/add" method="post" class="add">
+        @csrf <!-- << L'annotation ici ! -->
         <div class="input-group">
           <span class="input-group-addon" id="basic-addon1"
             ><span class="oi oi-pencil"></span

@@ -40,7 +40,7 @@
     @stack('styles')
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
       <a class="navbar-brand" href="#">Ma Todo List</a>
     </nav>
 
