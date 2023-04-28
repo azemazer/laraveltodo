@@ -3,7 +3,7 @@
   <div class="card">
     <div class="card-body">
       <!-- Action -->
-      <form action="/action/add" method="post" class="add">
+      <form action="{{route('todo.save')}}" method="post" class="add">
         @csrf <!-- << L'annotation ici ! -->
         <div class="input-group">
           <span class="input-group-addon" id="basic-addon1"
@@ -24,11 +24,17 @@
       <!-- Liste -->
       <ul class="list-group">
         @forelse ($todos as $todo)
-        <li class="list-group-item">
-          <span>{{ $todo->texte }}</span>
-          <a href="/action/done/{{$todo->id}}">Terminer</a>
-          <a href="/action/delete/{{$todo->id}}">Supprimer</a>
-        </li>
+        @if ($todo->termine)
+          <li class="list-group-item">
+            <span>{{ $todo->texte }}</span>
+            <a href="{{ route('todo.delete', ['id' => $todo->id]) }}"><i class="fa-solid fa-trash"></i></a>
+          </li>
+        @else
+          <li class="list-group-item">
+            <span>{{ $todo->texte }}</span>
+            <a href="{{ route('todo.done', ['id' => $todo->id]) }}"><i class="fa-solid fa-font-awesome"></i></a>
+          </li>
+        @endif
         @empty
         <li class="list-group-item text-center">C'est vide !</li>
         @endforelse

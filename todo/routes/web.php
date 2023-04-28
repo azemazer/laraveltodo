@@ -15,8 +15,8 @@ use App\Http\Controllers\TodosController;
 */
 
 
-Route::get('/', [TodosController::class, "liste"]);
-Route::post('/action/add', [TodosController::class, "saveTodo"]);
-Route::get('/action/done/{id}', [TodosController::class, "markAsDone"]);
-Route::get('/action/delete/{id}', [TodosController::class, "deleteTodo"]);
-Route::get('/about', [TodosController::class, "about"]);
+Route::get('/', [TodosController::class, "liste"])->name("todo.list");
+Route::post('/action/add', [TodosController::class, "saveTodo"])->name("todo.save");
+Route::get('/action/done/{id}', [TodosController::class, "markAsDone"])->name("todo.done");
+Route::get('/action/delete/{id}', [TodosController::class, "deleteTodo"])->name("todo.delete");
+Route::get('/about', [TodosController::class, "about"])->name("todo.about");

@@ -35,6 +35,8 @@
   crossorigin="anonymous"
 ></script>
 
+<script src="https://kit.fontawesome.com/efce024695.js" crossorigin="anonymous"></script>
+
 
     @stack('scripts')
     @stack('styles')

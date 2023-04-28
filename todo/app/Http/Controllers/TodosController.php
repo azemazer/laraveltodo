@@ -37,7 +37,9 @@ class TodosController extends Controller
     public function deleteTodo($id){
         $todo  = Todos::find($id);
         if($todo){
-            $todo->delete();
+            if ($todo->termine) {
+                $todo->delete();
+            }
         }
 
         return redirect("/");
