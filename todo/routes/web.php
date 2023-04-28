@@ -18,3 +18,5 @@ use App\Http\Controllers\TodosController;
 Route::get('/', [TodosController::class, "liste"]);
 Route::post('/action/add', [TodosController::class, "saveTodo"]);
 Route::get('/action/done/{id}', [TodosController::class, "markAsDone"]);
+Route::get('/action/delete/{id}', [TodosController::class, "deleteTodo"]);
+Route::get('/about', [TodosController::class, "about"]);

@@ -26,7 +26,8 @@
         @forelse ($todos as $todo)
         <li class="list-group-item">
           <span>{{ $todo->texte }}</span>
-          <!-- Action à ajouter pour Terminer et supprimer -->
+          <a href="/action/done/{{$todo->id}}">Terminer</a>
+          <a href="/action/delete/{{$todo->id}}">Supprimer</a>
         </li>
         @empty
         <li class="list-group-item text-center">C'est vide !</li>

@@ -41,7 +41,8 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-      <a class="navbar-brand" href="#">Ma Todo List</a>
+      <a class="navbar-brand" href="/">Ma Todo List</a>
+      <a class="navbar-item" href="/about">A propos</a>
     </nav>
 
     @yield('content')

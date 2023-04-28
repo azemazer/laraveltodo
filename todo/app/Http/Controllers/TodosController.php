@@ -11,6 +11,9 @@ class TodosController extends Controller
     public function liste(){
         return view("home", ["todos" => Todos::all()]);
     }
+    public function about(){
+        return view("about");
+    }
     public function saveTodo(Request $request){
         $texte = $request->input('texte');
     
